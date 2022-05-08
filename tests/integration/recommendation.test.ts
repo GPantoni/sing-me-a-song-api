@@ -1,6 +1,6 @@
-import app from '../src/app.js';
+import app from '../../src/app.js';
 import supertest from 'supertest';
-import { prisma } from '../src/database.js';
+import { prisma } from '../../src/database.js';
 import faker from '@faker-js/faker';
 import {
   bodyRequestFactory,
@@ -8,7 +8,7 @@ import {
   manyRecommendationsFactory,
   recommendationFactory,
   truncateTable,
-} from './factories/recommendationFactory.js';
+} from '../factories/recommendationFactory.js';
 
 describe('POST /recommendations - integration tests', () => {
   beforeEach(truncateTable);
