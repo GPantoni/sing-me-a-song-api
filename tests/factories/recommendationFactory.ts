@@ -73,3 +73,15 @@ export async function manyRecommendationsFactory(n: number) {
     skipDuplicates: true,
   });
 }
+
+export async function unitTestRecommendationFactory() {
+  const result = await prisma.recommendation.create({
+    data: {
+      name: 'Falamansa - Xote dos Milagres',
+      youtubeLink: 'https://www.youtube.com/watch?v=chwyjJbcs1Y',
+      score: -5,
+    },
+  });
+
+  return result;
+}
